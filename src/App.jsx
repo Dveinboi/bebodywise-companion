@@ -4,6 +4,7 @@ import GroomingChecker from './components/GroomingChecker';
 import BottleTracker from './components/BottleTracker';
 import RoutineGuide from './components/RoutineGuide';
 import ReorderModal from './components/ReorderModal';
+import DermQuizModal from './components/DermQuizModal';
 import Toast from './components/Toast';
 import { PRODUCT_INFO } from './data/bodywiseData';
 import { soundManager } from './utils/soundEffects';
@@ -14,6 +15,7 @@ const STORAGE_KEY = 'bebodywise_companion_state_v1';
 export default function App() {
   const [activeTab, setActiveTab] = useState('grooming'); // 'grooming' | 'bottle' | 'routine'
   const [isReorderOpen, setIsReorderOpen] = useState(false);
+  const [isQuizOpen, setIsQuizOpen] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [toast, setToast] = useState(null);
 
@@ -182,6 +184,7 @@ export default function App() {
         onApplyPreset={handleApplyPreset}
         isMuted={isMuted}
         setIsMuted={setIsMuted}
+        onOpenQuiz={() => setIsQuizOpen(true)}
       />
 
       {/* Main Container */}
@@ -218,6 +221,25 @@ export default function App() {
         onClose={() => setIsReorderOpen(false)}
         remainingDays={remainingDays}
         remainingMl={bottleState.currentMl}
+        onToast={showToast}
+      />
+
+      {/* Underarm Dermatological Diagnostic Quiz Modal */}
+      <DermQuizModal
+        isOpen={isQuizOpen}
+        onClose={() => setIsQuizOpen(false)}
+        onApplyCustomCadence={(cadence) => {
+          setBottleState(prev => ({
+            ...prev,
+            swipesPerUse: cadence.swipesPerUse,
+            frequencyPerDay: cadence.frequencyPerDay
+          }));
+          setGroomingState(prev => ({
+            ...prev,
+            methodId: cadence.methodId || prev.methodId,
+            sensitivityId: cadence.sensitivityId || prev.sensitivityId
+          }));
+        }}
         onToast={showToast}
       />
 
