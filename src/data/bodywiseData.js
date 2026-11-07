@@ -1,14 +1,14 @@
-// Clinical and product data for Be Bodywise 4% AHA BHA Underarm Roll-On
+// Clinical and product data for Be Bodywise Underarm Roll-On
 export const PRODUCT_INFO = {
-  name: "Be Bodywise 4% AHA BHA Underarm Roll-On",
-  tagline: "Clinically formulated with Lactic Acid, Mandelic Acid & Salicylic Acid",
+  name: "Be Bodywise Underarm Roll-On",
+  tagline: "Dermatologically formulated for all-day odor protection & skin brightening",
   volumeMl: 50,
   averageSwipesPerBottle: 140, // ~0.35ml per dual underarm application
   activeIngredients: [
-    { name: "3% Lactic Acid (AHA)", role: "Gentle surface exfoliation, sheds dead hyperpigmented cells & balances skin pH" },
-    { name: "1% Mandelic Acid (AHA)", role: "Slow-penetrating large molecule acid; ideal for sensitive skin and dark patches" },
-    { name: "Salicylic Acid (BHA)", role: "Oil-soluble acid that penetrates pores, dissolves trapped keratin & prevents ingrown hairs" },
-    { name: "Chamomile & Aloe Vera", role: "Anti-inflammatory botanical shield that soothes and mitigates barrier irritation" }
+    { name: "Gentle Brightening Complex", role: "Sheds dead hyperpigmented cells, balances skin pH & restores even underarm tone" },
+    { name: "Niacinamide & Mandelic Complex", role: "Targets stubborn friction darkness and dark patches without irritation" },
+    { name: "Pore-Clearing Actives", role: "Penetrates hair follicles, clears trapped keratin & prevents ingrown bumps" },
+    { name: "Chamomile & Aloe Vera", role: "Anti-inflammatory botanical shield that calms skin and protects barrier health" }
   ]
 };
 
@@ -19,7 +19,7 @@ export const GROOMING_METHODS = [
     icon: "Sparkles",
     baseHours: 36,
     riskLevel: "High",
-    description: "Pulls hair from follicle & strips outer stratum corneum. High stinging risk if AHA applied too early.",
+    description: "Pulls hair from follicle & strips outer stratum corneum. High stinging risk if roll-on applied too early.",
     color: "coral"
   },
   {
@@ -28,7 +28,7 @@ export const GROOMING_METHODS = [
     icon: "Scissors",
     baseHours: 20,
     riskLevel: "Moderate to High",
-    description: "Blade causes invisible epidermal micro-abrasions. Direct acid contact burns sensitized skin.",
+    description: "Blade causes invisible epidermal micro-abrasions. Direct roll-on contact burns sensitized skin.",
     color: "amber"
   },
   {
@@ -70,13 +70,13 @@ export const TIMELINE_WEEKS = [
     status: "Active Acclimation",
     percentage: 20,
     badge: "Odor Control",
-    description: "The AHA acids (Lactic + Mandelic) quickly lower your underarm pH from 6.2 to an optimal acidic 4.0. Odor-causing Corynebacterium bacteria cannot survive in this environment.",
+    description: "The roll-on actively optimizes underarm pH to an optimal slightly acidic barrier. Odor-causing bacteria cannot thrive in this balanced environment.",
     clinicalMilestones: [
-      "Zero aluminum sweat blockage: sweat remains natural, but odor is completely neutralised.",
-      "Mild tingling for 20-30 seconds during initial uses as skin acclimates to 4% active acids.",
-      "Dead skin buildup starts detaching during warm showers."
+      "Zero aluminum sweat pore blockage: sweat remains natural, but odor is completely neutralized.",
+      "Skin barrier acclimates smoothly with cooling comfort.",
+      "Dead surface cell buildup starts naturally clearing during warm showers."
     ],
-    patientExpectation: "Don't expect hyperpigmentation to vanish yet. This phase is about conquering body odor and acclimating skin barrier."
+    patientExpectation: "Don't expect hyperpigmentation to vanish immediately. This initial phase establishes 24h odor control and calms the skin barrier."
   },
   {
     week: "Weeks 3–4",
@@ -84,10 +84,10 @@ export const TIMELINE_WEEKS = [
     status: "Cellular Exfoliation",
     percentage: 45,
     badge: "Texture Refining",
-    description: "Salicylic Acid (BHA) dissolves lipid plugs within hair follicles. The rough 'strawberry skin' texture and tiny bumps smooth out noticeably.",
+    description: "Clears lipid buildup within hair follicles. The rough 'strawberry skin' texture and tiny friction bumps begin to smooth out noticeably.",
     clinicalMilestones: [
-      "Rough chicken-skin texture (keratosis pilaris) reduces by up to 60%.",
-      "Noticeably fewer trapped ingrown hairs post-grooming.",
+      "Rough chicken-skin texture (keratosis pilaris) reduces noticeably.",
+      "Fewer trapped ingrown hairs post-grooming.",
       "Underarm surface feels silky and frictionless against clothing."
     ],
     patientExpectation: "Dark shadows caused by rough uneven texture begin to soften under natural light."
@@ -98,9 +98,9 @@ export const TIMELINE_WEEKS = [
     status: "Pigment Breakdown",
     percentage: 70,
     badge: "Pigment Fading",
-    description: "Accelerated cellular turnover pushes melanin-dense dead cells to the surface where they naturally slough off. Stubborn friction-induced dark borders begin to break apart.",
+    description: "Accelerated cellular turnover pushes melanin-dense surface cells to shed naturally. Stubborn friction-induced dark borders begin to break apart.",
     clinicalMilestones: [
-      "Deep dark friction marks begin lightning to lighter brown tone.",
+      "Deep dark friction marks begin lightening to match natural skin tone.",
       "Acanthosis nigricans or shave-shadow starts visibly dissipating.",
       "Skin tone uniformity improves noticeably across the armpit fold."
     ],
@@ -112,13 +112,13 @@ export const TIMELINE_WEEKS = [
     status: "Peak Transformation",
     percentage: 90,
     badge: "Clinical Results",
-    description: "The primary 8-week clinical milestone. Melanin production is balanced, underarm skin tone matches your natural body shade, and recurring hyperpigmentation is held at bay.",
+    description: "The primary 8-week clinical milestone. Melanin production is balanced, underarm skin tone matches your natural body shade, and recurring darkening is held at bay.",
     clinicalMilestones: [
       "Underarms appear visibly brighter, even-toned, and clear of chronic darkening.",
-      "Confidence to wear sleeveless tops without second thoughts.",
-      "Resilient barrier that resists friction darkening from tight synthetic clothing."
+      "Confidence to wear sleeveless tops without hesitation.",
+      "Resilient barrier that resists friction darkening from tight clothing."
     ],
-    patientExpectation: "Maintain results by continuing usage 3-4 times per week or daily as part of your standard hygiene routine."
+    patientExpectation: "Maintain results by continuing usage daily or 3-4 times per week as part of your standard hygiene routine."
   },
   {
     week: "Weeks 9–12",
@@ -126,7 +126,7 @@ export const TIMELINE_WEEKS = [
     status: "Maintenance Mode",
     percentage: 100,
     badge: "Maintenance",
-    description: "Skin barrier is strong, cellular turnover is continuous, and post-inflammatory hyperpigmentation (PIH) from past razor burns is healed.",
+    description: "Skin barrier is strong, cellular turnover is continuous, and past razor burns and discoloration are healed.",
     clinicalMilestones: [
       "Continuous protection against future razor burn and ingrown hairs.",
       "Sustained 24h odor control with balanced microbiome.",
@@ -149,32 +149,32 @@ export const DRY_WEATHER_STEPS = [
     title: "The Bone-Dry Rule (Crucial!)",
     time: "0 mins post-shower",
     icon: "Sun",
-    desc: "Pat underarms completely dry with a soft microfiber towel. Applying AHA/BHA roll-on on damp skin forces the acids to penetrate too deeply and rapidly, triggering winter stinging."
+    desc: "Pat underarms completely dry with a soft towel. Applying roll-on on damp skin can cause excessive absorption and temporary tingling."
   },
   {
     step: 3,
-    title: "Apply 2 Thin Glides of AHA/BHA Roll-On",
+    title: "Apply 2 Thin Glides of Underarm Roll-On",
     time: "+30 seconds",
     icon: "Sparkles",
-    desc: "Glide the roll-on twice per underarm. Allow it to absorb and dry down undisturbed for 3 to 5 minutes so the pH activates properly."
+    desc: "Glide the roll-on evenly twice per underarm. Allow it to absorb and dry down undisturbed for 3 to 5 minutes."
   },
   {
     step: 4,
-    title: "Lock In with Ceramide or Niacinamide Lotion",
+    title: "Lock In with Hydrating Body Lotion",
     time: "+5 mins dry down",
     icon: "ShieldCheck",
-    desc: "The 'Moisture Sandwich' step: Layer a lightweight ceramide body lotion or Bodywise 5% Niacinamide lotion over the dried roll-on. This stops trans-epidermal moisture loss (TEWL) in dry winter air!"
+    desc: "The 'Moisture Sandwich' step: Layer a lightweight ceramide or niacinamide body lotion over the dried roll-on to stop trans-epidermal moisture loss (TEWL) in dry weather."
   }
 ];
 
 export const FAQS = [
   {
-    q: "Why does AHA/BHA sting if used immediately after shaving or waxing?",
-    a: "Grooming temporarily removes or abrades the stratum corneum (the top protective skin barrier). When chemical exfoliants with active acids (pH ~3.8-4.2) touch exposed nerve endings, it causes sharp stinging, inflammation, and can paradoxically trigger Post-Inflammatory Hyperpigmentation (PIH), making underarms darker. Wait until the Safe-Grooming Checker turns green!"
+    q: "Why does roll-on sting if used immediately after shaving or waxing?",
+    a: "Grooming temporarily removes or abrades the stratum corneum (the top protective skin barrier). When active deodorizing and brightening ingredients touch exposed micro-cuts, it causes sharp stinging and inflammation, which can paradoxically trigger Post-Inflammatory Hyperpigmentation (PIH). Always wait until the Safe-Grooming Checker turns green!"
   },
   {
-    q: "Is Bodywise Roll-On an antiperspirant?",
-    a: "No, and that is by design! Traditional antiperspirants use aluminum salts to artificially plug your sweat pores. Bodywise allows your body to sweat naturally, but uses AHAs to lower skin pH so odor-causing bacteria cannot survive. No odor, zero toxic aluminum plugs."
+    q: "Is Be Bodywise Roll-On an antiperspirant?",
+    a: "No, and that is by design! Traditional antiperspirants use harsh aluminum salts to artificially plug your sweat pores. Be Bodywise allows your body to sweat naturally, but balances skin pH so odor-causing bacteria cannot survive. Clean odor protection with zero toxic aluminum pore plugs."
   },
   {
     q: "How long does a 50ml bottle actually last?",
@@ -182,7 +182,6 @@ export const FAQS = [
   },
   {
     q: "Can I wear deodorant spray or perfume on top?",
-    a: "Avoid spraying alcohol-heavy aerosol deodorants directly over the roll-on, as denatured alcohol dehydrates the skin and destabilizes the acids. If you want fragrance, spray your favorite perfume onto your clothes instead."
+    a: "Avoid spraying alcohol-heavy aerosol deodorants directly over the roll-on, as denatured alcohol dehydrates the skin and causes irritation. If you want fragrance, spray your favorite perfume onto your clothes instead."
   }
 ];
-

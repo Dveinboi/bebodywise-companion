@@ -60,7 +60,7 @@ export default function RoutineGuide({ selectedWeekIndex, setSelectedWeekIndex, 
             Pigmentation Timeline & Care Guide
           </h1>
           <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
-            Real skin cellular turnover takes 28 to 45 days. Set realistic expectations for AHA/BHA exfoliation, master the winter "Moisture Sandwich" technique, and prevent irritation flare-ups.
+            Real skin cellular turnover takes 28 to 45 days. Set realistic expectations for skin tone evening and odor defense, master the winter "Moisture Sandwich" technique, and prevent irritation flare-ups.
           </p>
         </div>
       </div>
@@ -229,9 +229,9 @@ export default function RoutineGuide({ selectedWeekIndex, setSelectedWeekIndex, 
               </span>
               <h4 className="text-lg font-bold text-white">Even-Toned, Smooth & Odor-Free</h4>
               <ul className="text-xs text-slate-200 space-y-1 text-left list-disc list-inside opacity-95">
-                <li>Melanin clusters exfoliated via Lactic + Mandelic acids</li>
-                <li>Pores clear of trapped keratin via Salicylic Acid</li>
-                <li>Acidic 4.0 pH barrier locks out body odor 24/7</li>
+                <li>Melanin clusters gently cleared and tone visibly balanced</li>
+                <li>Pores cleared of trapped sebum and friction bumps</li>
+                <li>Optimized pH barrier locks out body odor 24/7</li>
               </ul>
             </div>
           </div>
@@ -415,9 +415,9 @@ export default function RoutineGuide({ selectedWeekIndex, setSelectedWeekIndex, 
           <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 text-rose-200 flex items-start gap-3 text-xs leading-relaxed">
             <ShieldCheck className="w-5 h-5 text-rose-400 shrink-0 mt-0.5" />
             <div>
-              <strong className="text-rose-300 text-sm">Grooming Day Rule: Skip the AHA/BHA Roll-on!</strong>
+              <strong className="text-rose-300 text-sm">Grooming Day Rule: Skip the Roll-on Today!</strong>
               <p className="mt-1 opacity-90">
-                Because you waxed or shaved today, the roll-on step is automatically disabled in your checklist below to prevent acid stinging. Switch to gentle Cica or Aloe Vera gel today and return to the roll-on once the Safe-Grooming timer turns green.
+                Because you waxed or shaved today, the roll-on step is automatically disabled in your checklist below to prevent stinging. Switch to gentle Cica or Aloe Vera gel today and return to the roll-on once the Safe-Grooming timer turns green.
               </p>
             </div>
           </div>
@@ -435,12 +435,12 @@ export default function RoutineGuide({ selectedWeekIndex, setSelectedWeekIndex, 
             {
               id: 'dry',
               title: 'Ensure 100% bone-dry skin surface',
-              desc: 'Wait 60 seconds after towel drying. Water on skin destabilizes AHA pH and causes acid spikes.',
+              desc: 'Wait 60 seconds after towel drying. Applying roll-on on damp skin can cause excessive absorption and temporary tingling.',
               disabled: false
             },
             {
               id: 'rollon',
-              title: isShaveDay ? '⛔ SKIP ROLL-ON TODAY (Apply Soothing Gel Instead)' : 'Apply 2 glides of Bodywise 4% AHA/BHA Roll-On',
+              title: isShaveDay ? '⛔ SKIP ROLL-ON TODAY (Apply Soothing Gel Instead)' : 'Apply 2 glides of Be Bodywise Roll-On',
               desc: isShaveDay ? 'Use pure aloe vera or cica balm to heal micro-tears.' : 'Glide evenly across armpit fold. Do not rub in vigorously with fingers.',
               disabled: false,
               highlight: !isShaveDay
@@ -448,7 +448,7 @@ export default function RoutineGuide({ selectedWeekIndex, setSelectedWeekIndex, 
             {
               id: 'wait',
               title: 'Wait 3 to 5 minutes undisturbed dry-down',
-              desc: 'Let active Lactic, Mandelic, and Salicylic acids bond with the stratum corneum before layering clothes.',
+              desc: 'Let active deodorizing and brightening ingredients bond with the skin surface before layering clothes.',
               disabled: isShaveDay
             },
             {

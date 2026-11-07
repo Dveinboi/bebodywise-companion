@@ -43,7 +43,7 @@ export default function ReorderModal({ isOpen, onClose, remainingDays, remaining
     },
     {
       id: 'bundle-lotion',
-      name: 'AHA Roll-On + 5% Niacinamide Lotion',
+      name: 'Underarm Roll-On + Hydrating Lotion',
       tag: 'Dry Weather Care Kit',
       price: '₹699',
       originalPrice: '₹899',

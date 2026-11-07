@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ShieldCheck, Droplet, Calendar, Volume2, VolumeX, Sparkles, RefreshCw, ChevronDown } from 'lucide-react';
 import { soundManager } from '../utils/soundEffects';
 
-export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted, setIsMuted }) {
+export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted, setIsMuted, onOpenQuiz }) {
   const [showPresetMenu, setShowPresetMenu] = useState(false);
 
   const tabs = [
@@ -28,29 +28,25 @@ export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted
           
           {/* Logo & Brand Identity */}
           <div className="flex items-center gap-3">
-            <div className="h-9 sm:h-10 px-2 rounded-xl bg-[#0F1D26] border border-[#1A2F3D] flex items-center justify-center shadow-lg shadow-[#00C2A8]/10 group">
+            <div className="flex items-center gap-2.5">
               <img
                 src="/logo.png"
-                alt="Be Bodywise Logo"
-                className="h-6 sm:h-7 w-auto object-contain brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-transform group-hover:scale-105"
+                alt="Be Bodywise"
+                className="h-7 sm:h-8 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(255,255,255,0.35)]"
                 onError={(e) => {
-                  // Fallback if image path fails
                   e.currentTarget.style.display = 'none';
                 }}
               />
             </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="font-black tracking-tight text-base sm:text-lg text-white font-sans flex items-center">
-                  Be Bodywise
+            <div className="border-l border-[#1A2F3D] pl-3 hidden sm:block">
+              <div className="flex items-center gap-1.5">
+                <span className="text-xs font-bold text-white tracking-wide">
+                  Underarm Care Companion
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#00C2A8] animate-ping" />
-                <span className="text-[10px] tracking-wider uppercase font-semibold text-[#00C2A8] bg-[#00C2A8]/10 px-2 py-0.5 rounded border border-[#00C2A8]/30 hidden sm:inline-block">
-                  4% AHA BHA Companion
-                </span>
               </div>
-              <p className="text-[10px] sm:text-[11px] text-slate-400 font-medium">
-                Dermatologically Precise Underarm Care
+              <p className="text-[10px] text-slate-400 font-medium">
+                Dermatologically Precise Routine & Safety
               </p>
             </div>
           </div>
@@ -84,6 +80,19 @@ export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted
 
           {/* Quick Presets & Utility Controls */}
           <div className="flex items-center gap-2">
+
+            {/* Diagnostic Quiz Button */}
+            <button
+              onClick={() => {
+                soundManager.playClick();
+                onOpenQuiz();
+              }}
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#00C2A8]/10 border border-[#00C2A8]/30 hover:bg-[#00C2A8]/20 text-xs font-semibold text-[#00C2A8] transition-all"
+              title="Skin Diagnostic & Routine Quiz"
+            >
+              <Sparkles className="w-3.5 h-3.5" />
+              <span className="hidden sm:inline">Derm Quiz</span>
+            </button>
             
             {/* Quick Demo Presets Dropdown */}
             <div className="relative">

@@ -266,7 +266,7 @@ export default function BottleTracker({ state, setState, onOpenReorder, onToast 
                     <g transform="translate(48, 125)">
                       <rect x="0" y="0" width="64" height="48" rx="6" fill="#060C10" fillOpacity="0.85" stroke="#1D3644" strokeWidth="1" />
                       <text x="32" y="18" textAnchor="middle" fill="#FFFFFF" fontSize="7" fontWeight="800" fontFamily="sans-serif">BE BODYWISE</text>
-                      <text x="32" y="28" textAnchor="middle" fill="#00C2A8" fontSize="6" fontWeight="700">4% AHA BHA</text>
+                      <text x="32" y="28" textAnchor="middle" fill="#00C2A8" fontSize="6" fontWeight="700">ROLL-ON</text>
                       <text x="32" y="38" textAnchor="middle" fill="#88A0B0" fontSize="5">50ml Underarm</text>
                     </g>
                   </g>

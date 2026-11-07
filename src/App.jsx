@@ -233,7 +233,7 @@ export default function App() {
                 Clinical Precision Formula
               </span>
               <h3 className="text-lg sm:text-xl font-black text-white">
-                Active Chemical Exfoliants inside the 4% AHA/BHA Roll-On
+                Underarm Roll-On Active Care Actives
               </h3>
             </div>
             <a
@@ -278,11 +278,11 @@ export default function App() {
             />
             <span className="font-extrabold text-white tracking-wide text-sm">Be Bodywise</span>
             <span>•</span>
-            <span>4% AHA BHA Underarm Precision Companion</span>
+            <span>Underarm Precision Roll-On Companion</span>
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">
-            <span>Formulated at pH 3.8</span>
+            <span>Optimal pH Balance</span>
             <span>•</span>
             <span>Zero Aluminum Salts</span>
             <span>•</span>
