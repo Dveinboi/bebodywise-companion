@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { 
   ShieldAlert, ShieldCheck, Clock, AlertTriangle, Sparkles, 
   CheckCircle2, Bell, BellRing, Info, Flame, Droplets, HeartPulse,
-  Scissors, Zap, ChevronRight, HelpCircle
+  Scissors, Zap, ChevronRight, HelpCircle, CalendarPlus
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { GROOMING_METHODS, SENSITIVITY_LEVELS, POST_GROOM_SYMPTOMS } from '../data/bodywiseData';
 import { soundManager } from '../utils/soundEffects';
+import { generateIcsCalendarEvent } from '../utils/icsHelper';
 
 export default function GroomingChecker({ state, setState, onToast }) {
   const {
@@ -135,6 +136,21 @@ export default function GroomingChecker({ state, setState, onToast }) {
       type: 'info',
       title: 'Smart Reminder Set',
       message: `We'll remind you on ${targetSafeTime.toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })} at ${targetSafeTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}.`
+    });
+  };
+
+  const exportToCalendar = () => {
+    soundManager.playClick();
+    generateIcsCalendarEvent({
+      title: 'Be Bodywise Roll-On: Skin Barrier Safe Window',
+      description: `Your underarm skin barrier is fully re-epithelialized post-${selectedMethod.name.toLowerCase()}. Safe to apply Be Bodywise 4% AHA BHA roll-on without chemical stinging!`,
+      startDate: targetSafeTime,
+      durationMinutes: 15
+    });
+    onToast({
+      type: 'success',
+      title: 'Calendar File Downloaded',
+      message: 'iCalendar (.ics) ready. Open to sync with Google / Apple / Outlook calendar.'
     });
   };
 
@@ -457,7 +473,7 @@ export default function GroomingChecker({ state, setState, onToast }) {
             </div>
 
             {/* Reminder & Notification CTA */}
-            <div className="mt-5">
+            <div className="mt-5 space-y-2">
               <button
                 onClick={scheduleReminder}
                 className={`w-full py-3 px-4 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-lg ${
@@ -485,6 +501,16 @@ export default function GroomingChecker({ state, setState, onToast }) {
                   </>
                 )}
               </button>
+
+              {!isSafe && (
+                <button
+                  onClick={exportToCalendar}
+                  className="w-full py-2 px-3 rounded-lg bg-[#0A1318] border border-[#172733] hover:border-[#00C2A8]/40 text-xs text-slate-300 hover:text-white flex items-center justify-center gap-1.5 transition-colors"
+                >
+                  <CalendarPlus className="w-3.5 h-3.5 text-[#00C2A8]" />
+                  <span>Add Safe Window to Google / Apple Calendar (.ics)</span>
+                </button>
+              )}
             </div>
 
           </div>
@@ -539,3 +565,4 @@ export default function GroomingChecker({ state, setState, onToast }) {
     </div>
   );
 }
+

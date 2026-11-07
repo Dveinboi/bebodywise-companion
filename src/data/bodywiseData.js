@@ -185,3 +185,4 @@ export const FAQS = [
     a: "Avoid spraying alcohol-heavy aerosol deodorants directly over the roll-on, as denatured alcohol dehydrates the skin and destabilizes the acids. If you want fragrance, spray your favorite perfume onto your clothes instead."
   }
 ];
+

@@ -194,3 +194,4 @@ export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted
     </header>
   );
 }
+

@@ -73,3 +73,4 @@ npm run preview
 - **Celebration Effects:** Canvas Confetti
 - **Audio Feedback:** Synthetic Web Audio API engine
 - **Persistence:** LocalStorage sync
+
