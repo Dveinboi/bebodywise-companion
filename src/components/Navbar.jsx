@@ -28,15 +28,21 @@ export default function Navbar({ activeTab, setActiveTab, onApplyPreset, isMuted
           
           {/* Logo & Brand Identity */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-[#00C2A8] to-[#0A4D43] p-0.5 shadow-lg shadow-[#00C2A8]/20 flex items-center justify-center">
-              <div className="w-full h-full bg-[#060B0E] rounded-[10px] flex items-center justify-center">
-                <span className="font-extrabold text-[#00C2A8] text-base tracking-tighter">BW</span>
-              </div>
+            <div className="h-9 sm:h-10 px-2 rounded-xl bg-[#0F1D26] border border-[#1A2F3D] flex items-center justify-center shadow-lg shadow-[#00C2A8]/10 group">
+              <img
+                src="/logo.png"
+                alt="Be Bodywise Logo"
+                className="h-6 sm:h-7 w-auto object-contain brightness-0 invert drop-shadow-[0_0_8px_rgba(255,255,255,0.4)] transition-transform group-hover:scale-105"
+                onError={(e) => {
+                  // Fallback if image path fails
+                  e.currentTarget.style.display = 'none';
+                }}
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <span className="font-black tracking-widest text-sm sm:text-base text-white uppercase font-sans">
-                  Bodywise
+                <span className="font-black tracking-tight text-base sm:text-lg text-white font-sans flex items-center">
+                  Be Bodywise
                 </span>
                 <span className="w-1.5 h-1.5 rounded-full bg-[#00C2A8] animate-ping" />
                 <span className="text-[10px] tracking-wider uppercase font-semibold text-[#00C2A8] bg-[#00C2A8]/10 px-2 py-0.5 rounded border border-[#00C2A8]/30 hidden sm:inline-block">

@@ -1,0 +1,17 @@
+{
+  "short_name": "Bodywise Care",
+  "name": "Be Bodywise | AHA/BHA Underarm Care Companion",
+  "description": "Safe-grooming timing checker, 50ml bottle depletion tracker, and 8-week pigmentation guide for Be Bodywise AHA BHA Underarm Roll-on.",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%23060B0E'><rect width='512' height='512' rx='128' fill='%23060B0E'/><circle cx='256' cy='256' r='180' stroke='%2300C2A8' stroke-width='32' fill='none'/><path d='m192 256 48 48 96-96' stroke='%2300C2A8' stroke-width='32' stroke-linecap='round' stroke-linejoin='round'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#060B0E",
+  "theme_color": "#060B0E",
+  "display": "standalone",
+  "orientation": "portrait"
+}

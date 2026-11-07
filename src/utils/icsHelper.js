@@ -50,3 +50,4 @@ export function generateIcsCalendarEvent({ title, description, startDate, durati
   document.body.removeChild(link);
   URL.revokeObjectURL(url);
 }
+

@@ -269,10 +269,16 @@ export default function App() {
       {/* Footer */}
       <footer className="border-t border-[#111E26] bg-[#05090C] py-8 text-xs text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <span className="font-extrabold text-white tracking-wider">BODYWISE</span>
+          <div className="flex items-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Be Bodywise"
+              className="h-5 w-auto object-contain brightness-0 invert opacity-90"
+              onError={(e) => { e.currentTarget.style.display = 'none'; }}
+            />
+            <span className="font-extrabold text-white tracking-wide text-sm">Be Bodywise</span>
             <span>•</span>
-            <span>AHA BHA Underarm Precision Companion</span>
+            <span>4% AHA BHA Underarm Precision Companion</span>
           </div>
 
           <div className="flex items-center gap-4 text-[11px]">
