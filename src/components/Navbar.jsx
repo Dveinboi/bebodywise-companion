@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ShieldCheck, Droplet, Calendar, Volume2, VolumeX, Sparkles, RefreshCw, ChevronDown } from 'lucide-react';
 import { soundManager } from '../utils/soundEffects';
 

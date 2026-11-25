@@ -39,7 +39,7 @@ class SoundManager {
 
       osc.start();
       osc.stop(this.ctx.currentTime + 0.05);
-    } catch (e) {
+    } catch {
       // AudioContext may be restricted by autoplay policy
     }
   }
@@ -72,7 +72,7 @@ class SoundManager {
         osc.start(now + idx * 0.08);
         osc.stop(now + idx * 0.08 + 0.3);
       });
-    } catch (e) {
+    } catch {
       // AudioContext ignore
     }
   }
@@ -102,7 +102,7 @@ class SoundManager {
 
       osc.start(now);
       osc.stop(now + 0.2);
-    } catch (e) {
+    } catch {
       // AudioContext ignore
     }
   }
